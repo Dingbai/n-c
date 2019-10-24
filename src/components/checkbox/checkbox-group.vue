@@ -23,7 +23,6 @@
     },
     methods: {
       change(data) {
-        console.log('data' + '---' + data)
         this.currentValue = data
         this.$emit('input', data)
         this.$emit('on-change', data)
