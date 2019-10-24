@@ -23,14 +23,14 @@
     },
     methods: {
       change(data) {
+        console.log('data' + '---' + data)
         this.currentValue = data
         this.$emit('input', data)
         this.$emit('on-change', data)
       },
       updateModel(flag) {
         this.children = findComponentsDownward(this, 'iCheckbox')
-        // fix 组件绑定错误
-        console.log(this.model)
+     
         if (this.children) {
           const { value } = this
 

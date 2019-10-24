@@ -5,7 +5,7 @@
       v-model="model"
       type="checkbox"
       :disabled="disabled"
-      :checked="currentValue"
+      :value="label"
       @change="change"
     />
     <input
@@ -57,6 +57,7 @@
       if (this.parent) {
         this.group = true
       }
+      
       if (this.group) {
         this.parent.updateModel(true)
       } else {
@@ -78,7 +79,6 @@
         if (this.group) {
           this.parent.change(this.model)
         } else {
-          console.log('change')
           this.$emit('on-change', value)
         }
       },

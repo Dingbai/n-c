@@ -4,7 +4,6 @@
 
     <br />
     数据：{{ single }}
-
     <hr />
     <i-checkbox-group v-model="multiple">
       <i-checkbox label="option1">选项 1</i-checkbox>
