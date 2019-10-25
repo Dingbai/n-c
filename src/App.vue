@@ -13,6 +13,7 @@
 
 <style lang="less">
   @import '~@/assets/style/reset.less';
+  @import '~@/assets/style/common.less';
 </style>
 
 <style lang="less" scoped>

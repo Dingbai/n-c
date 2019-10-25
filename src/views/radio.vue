@@ -1,14 +1,18 @@
 <template>
   <div>
-    <i-radio v-model="single">hello radio</i-radio>
-    测试 --- {{ single }}
-    <hr />
+    <h3 class="test-title">radio 组件</h3>
+    <i-radio v-model="single">single radio</i-radio>
+    <p class="test">
+      {{ single }}
+    </p>
     <i-radio-group v-model="mutiple">
       <i-radio label="西瓜">西瓜</i-radio>
       <i-radio label="芒果">芒果</i-radio>
       <i-radio label="香瓜">香瓜</i-radio>
     </i-radio-group>
-    测试 --- {{ mutiple }}
+    <p class="test">
+      {{ mutiple }}
+    </p>
   </div>
 </template>
 
@@ -20,7 +24,7 @@
     components: { iRadio, iRadioGroup },
     data() {
       return {
-        single: true,
+        single: false,
         mutiple: '西瓜'
       }
     }

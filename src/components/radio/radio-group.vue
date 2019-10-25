@@ -25,20 +25,19 @@
     },
     data() {
       return {
-        currentValua: this.value,
-        children: []
+        currentValue: this.value,
+        children: findComponentsDownward(this, 'iRadio')
       }
     },
     methods: {
       change(data) {
-        this.currentValua = data.value
+        this.currentValue = data.value
         this.updateModel()
         this.$emit('input', data.value)
         this.$emit('on-change', data.value)
       },
       updateModel() {
         this.children = findComponentsDownward(this, 'iRadio')
-
         if (this.children) {
           this.children.forEach(child => {
             child.currentValue = this.currentValue === child.label

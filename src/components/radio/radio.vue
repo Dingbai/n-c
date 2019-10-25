@@ -3,19 +3,12 @@
     <input
       type="radio"
       :disabled="disabled"
-      :value="currentValue"
-      v-model="model"
-      @change="change"
-      :name="groupName"
-    />
-    <!-- <input
-      v-else
-      type="radio"
-      :disabled="disabled"
       :checked="currentValue"
+      :name="groupName"
+      :value="currentValue"
       @change="change"
-    /> -->
-    <slot></slot>
+    />
+    <slot>{{ label }}</slot>
   </label>
 </template>
 
@@ -50,14 +43,12 @@
     data() {
       return {
         currentValue: this.value,
-        model: [],
         group: false,
         parent: findComponentUpward(this, 'iRadioGroup'),
         groupName: this.name
       }
     },
     mounted() {
-
       if (this.parent) {
         this.group = true
         if (this.name && this.name !== this.parent.name) {
@@ -80,18 +71,20 @@
         if (this.disabled) return false
 
         let checked = event.target.checked
+        let value = checked ? this.trueValue : this.falseValue
 
-        this.currentValue = checked ? this.trueValue : this.falseValue
-        this.$emit('input', checked)
+        this.currentValue = checked
+        this.$emit('input', value)
 
-
-        if (this.label !== undefined) {
-          this.parent.change({
-            value: this.label,
-            checked: this.currentValue
-          })
-        } else {
-          this.$emit('on-change', checked)
+        if (this.parent) {
+          if (this.label !== undefined) {
+            this.parent.change({
+              value: this.label,
+              checked: this.currentValue
+            })
+          } else {
+            this.$emit('on-change', value)
+          }
         }
       },
       updateModel() {
