@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>具有数据校验功能的表单组件——Form</h3>
+    <h3 class="test-title">form组件</h3>
     <i-form ref="form" :model="formValidate" :rules="ruleValidate">
       <i-form-item label="用户名" prop="name">
         <i-input v-model="formValidate.name"></i-input>
@@ -9,6 +9,10 @@
         <i-input v-model="formValidate.mail"></i-input>
       </i-form-item>
     </i-form>
+    <p class="test">
+      {{ formValidate.mail }}
+      {{ formValidate.name }}
+    </p>
     <button @click="handleSubmit">提交</button>
     <button @click="handleReset">重置</button>
   </div>
@@ -19,7 +23,6 @@
   import iInput from '@/components/input/input.vue'
 
   export default {
-    name: 'form',
     components: { iForm, iFormItem, iInput },
     data() {
       return {
@@ -40,16 +43,16 @@
     },
     methods: {
       handleSubmit() {
-        this.$refs.form.validate(valid => {
-          if (valid) {
-            window.alert('提交成功')
-          } else {
-            window.alert('表单校验失败')
-          }
-        })
+        // this.$refs.form.validate(valid => {
+        //   if (valid) {
+        //     console.log('提交成功')
+        //   } else {
+        //     console.log('提交失败')
+        //   }
+        // })
       },
       handleReset() {
-        this.$refs.form.resetFields()
+        // this.$refs.form.resetFields()
       }
     }
   }

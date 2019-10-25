@@ -1,10 +1,11 @@
 <template>
   <div>
+    <h3 class="test-title">checkbox 组件</h3>
     <i-checkbox v-model="single">单独选项</i-checkbox>
+    <p class="test">
+      {{ single }}
+    </p>
 
-    <br />
-    数据：{{ single }}
-    <hr />
     <i-checkbox-group v-model="multiple">
       <i-checkbox label="option1">选项 1</i-checkbox>
       <i-checkbox label="option2">选项 2</i-checkbox>
@@ -13,8 +14,10 @@
     </i-checkbox-group>
 
     <br />
-    数据：{{ multiple }}
-    <hr />
+    <p class="test">
+      {{ multiple }}
+    </p>
+
     <i-checkbox
       :indeterminate="indeterminate"
       :value="checkAll"
@@ -27,6 +30,9 @@
       <i-checkbox label="苹果">苹果</i-checkbox>
       <i-checkbox label="西瓜">西瓜</i-checkbox>
     </i-checkbox-group>
+    <p class="test">
+      {{ checkAllGroup }}
+    </p>
   </div>
 </template>
 <script>
