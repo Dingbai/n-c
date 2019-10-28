@@ -1,8 +1,14 @@
 <template>
-  <input type="text" @input="change" :value="currentValue" />
+  <input
+    type="text"
+    @blur="handleBlur"
+    @input="handleChange"
+    :value="currentValue"
+  />
 </template>
 
 <script>
+  import Emitter from '@/mixins/emitter.js'
   export default {
     name: 'iInput',
     props: {
@@ -10,26 +16,29 @@
         type: String
       }
     },
+    mixins: [Emitter],
     data() {
       return {
         currentValue: this.value
       }
     },
     methods: {
-      change(event) {
+      handleChange(event) {
         let value = event.target.value
 
+        this.currentValue = value
         this.$emit('input', value)
+        this.dispatch('iFormItem', 'on-form-change', value)
       },
-      updateValue() {
-        this.currentValue = this.value
+      handleBlur() {
+        this.dispatch('iFormItem', 'on-form-blur', this.currentValue)
       }
     },
 
     watch: {
       value(val) {
         if (val) {
-          this.updateValue()
+          this.currentValue = val
         }
       }
     }

@@ -10,8 +10,9 @@
       </i-form-item>
     </i-form>
     <p class="test">
-      {{ formValidate.mail }}
-      {{ formValidate.name }}
+      用户名:{{ formValidate.name }}
+      <br />
+      邮箱:{{ formValidate.mail }}
     </p>
     <button @click="handleSubmit">提交</button>
     <button @click="handleReset">重置</button>
@@ -43,16 +44,16 @@
     },
     methods: {
       handleSubmit() {
-        // this.$refs.form.validate(valid => {
-        //   if (valid) {
-        //     console.log('提交成功')
-        //   } else {
-        //     console.log('提交失败')
-        //   }
-        // })
+        this.$refs.form.validate(valid => {
+          if (valid) {
+            console.log('提交成功')
+          } else {
+            console.log('提交失败')
+          }
+        })
       },
       handleReset() {
-        // this.$refs.form.resetFields()
+        this.$refs.form.resetFields()
       }
     }
   }
