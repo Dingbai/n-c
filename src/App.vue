@@ -4,6 +4,7 @@
       <router-link to="/">form</router-link>
       <router-link to="/checkbox">checkbox</router-link>
       <router-link to="/radio">radio</router-link>
+      <router-link to="/alert">alert</router-link>
     </div>
     <div class="content">
       <router-view></router-view>

@@ -8,7 +8,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Form 
+      component: Form
     },
     {
       path: '/checkbox',
@@ -20,5 +20,10 @@ export default new Router({
       name: 'radio',
       component: () => import('./views/radio.vue')
     },
+    {
+      path: '/alert',
+      name: 'alert',
+      component: () => import('./views/alert.vue')
+    }
   ]
 })
