@@ -1,15 +1,10 @@
 /* eslint-disable no-console */
 import Vue from 'vue'
 import Alert from '@/components/alert/alert.vue'
-console.log(Alert)
-Alert.newInstance = (properties = {}) => {
-  const props = properties
+Alert.newInstance = () => {
   const Instance = new Vue({
-    data: props,
     render(h) {
-      return h(Alert, {
-        props
-      })
+      return h(Alert)
     }
   })
   const component = Instance.$mount()
