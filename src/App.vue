@@ -5,6 +5,9 @@
       <router-link to="/checkbox">checkbox</router-link>
       <router-link to="/radio">radio</router-link>
       <router-link to="/alert">alert</router-link>
+      <router-link to="/table-render">table-render</router-link>
+      <router-link to="/table-slot">table-slot</router-link>
+      <router-link to="/test">test</router-link>
     </div>
     <div class="content">
       <router-view></router-view>

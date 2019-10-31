@@ -24,6 +24,19 @@ export default new Router({
       path: '/alert',
       name: 'alert',
       component: () => import('./views/alert.vue')
-    }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('./views/test.vue')
+    },
+    {
+      path: '/table-render',
+      component: () => import('./views/table-render.vue')
+    },
+    {
+      path: '/table-slot',
+      component: () => import('./views/table-slot.vue')
+    },
   ]
 })

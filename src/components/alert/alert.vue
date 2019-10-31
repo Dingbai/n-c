@@ -36,6 +36,7 @@
         if (config.duration === 0) {
           return
         }
+        // todo notice 不支持render 和组件销毁功能
         console.log(config.render)
         setTimeout(() => {
           this.remove(name)
