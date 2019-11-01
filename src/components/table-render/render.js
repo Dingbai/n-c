@@ -6,13 +6,13 @@ export default {
     index: Number,
     render: Function
   },
-  render: (h, ctx) => {
+  render: function(h, context) {
     const params = {
-      row: ctx.props.row,
-      column: ctx.props.column,
-      index: ctx.props.index
+      row: context.props.row,
+      column: context.props.column,
+      index: context.props.index
     }
 
-    return ctx.props.render(h, params)
+    return context.props.render(h, params)
   }
 }

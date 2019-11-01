@@ -2,19 +2,19 @@
   <table>
     <thead>
       <tr>
-        <th v-for="col in columns" :key="col.key">{{ col.title }}</th>
+        <th v-for="col in columns">{{ col.title }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(row,index) in data" :key="index">
+      <tr v-for="(row,rowIndex) in data">
         <td v-for="col in columns">
-          <template v-if="'render' in col">
-            <render
+          <template v-if="'slot' in col">
+            <slot
               :row="row"
               :column="col"
-              :index="index"
-              :render="col.render"
-            ></render>
+              :index="rowIndex"
+              :name="col.slot"
+            ></slot>
           </template>
           <template v-else>
             {{ row[col.key] }}
@@ -26,20 +26,15 @@
 </template>
 
 <script>
-  import Render from './render.js'
   export default {
     props: {
       columns: {
         type: Array
       },
-      data: {
-        type: Array
-      }
-    },
-    components: { Render }
+      data: { type: Array }
+    }
   }
 </script>
-
 <style scoped>
   table,
   td,

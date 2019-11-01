@@ -1,6 +1,11 @@
 <template>
   <div>
+    <h3 class="test-title">table-render组件</h3>
     <table-render :columns="columns" :data="data"></table-render>
+    <div class="test">
+      data
+      <p class="test" v-for="item in data">{{ item }}</p>
+    </div>
   </div>
 </template>
 <script>
