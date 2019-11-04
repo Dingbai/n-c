@@ -7,6 +7,7 @@
       <router-link to="/alert">alert</router-link>
       <router-link to="/table-render">table-render</router-link>
       <router-link to="/table-slot">table-slot</router-link>
+      <router-link to="/tree">tree</router-link>
       <router-link to="/test">test</router-link>
     </div>
     <div class="content">

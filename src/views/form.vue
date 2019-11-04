@@ -22,6 +22,7 @@
   import iForm from '@/components/form/form.vue'
   import iFormItem from '@/components/form/form-item.vue'
   import iInput from '@/components/input/input.vue'
+  import Emitter from '../mixins/emitter.js'
 
   export default {
     components: { iForm, iFormItem, iInput },
