@@ -8,6 +8,7 @@
       <router-link to="/table-render">table-render</router-link>
       <router-link to="/table-slot">table-slot</router-link>
       <router-link to="/tree">tree</router-link>
+      <router-link to="/select">select</router-link>
       <router-link to="/test">test</router-link>
     </div>
     <div class="content">
@@ -17,10 +18,10 @@
 </template>
 
 <style lang="less">
-  @import '~@/assets/style/reset.less';
-  @import '~@/assets/style/common.less';
+@import '~@/assets/style/reset.less';
+@import '~@/assets/style/common.less';
 </style>
 
 <style lang="less" scoped>
-  @import '~@/assets/style/app.less';
+@import '~@/assets/style/app.less';
 </style>

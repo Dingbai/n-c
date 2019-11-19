@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  import Emmiter from '@/mixins/emitter.js'
+  import Emitter from '@/mixins/emitter.js'
   export default {
     name: 'iForm',
-    mixins: [Emmiter],
+    mixins: [Emitter],
     props: {
       model: {
         type: Object
