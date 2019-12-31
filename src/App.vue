@@ -9,6 +9,7 @@
       <router-link to="/table-slot">table-slot</router-link>
       <router-link to="/tree">tree</router-link>
       <router-link to="/select">select</router-link>
+      <router-link to="/menu">menu</router-link>
       <router-link to="/test">test</router-link>
     </div>
     <div class="content">

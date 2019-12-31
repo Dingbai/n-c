@@ -9,7 +9,7 @@ function broadcast(componentName, eventName, params) {
     }
   })
 }
-
+// this.$parent 返回实例 this.$children 返回数组
 export default {
   methods: {
     dispatch(componentName, eventName, params) {
