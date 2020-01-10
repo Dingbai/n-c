@@ -49,6 +49,10 @@ export default new Router({
     {
       path: '/menu',
       component: () => import('./views/menu.vue')
+    },
+    {
+      path: '/button',
+      component: () => import('./views/button.vue')
     }
   ]
 })

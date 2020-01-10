@@ -8,9 +8,6 @@ export default {
   props: {
     isShow: { type: Boolean },
     itemData: { type: Array }
-  },
-  created() {
-    // console.log(this.isShow)
   }
 }
 </script>
