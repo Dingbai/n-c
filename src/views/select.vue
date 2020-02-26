@@ -2,9 +2,12 @@
   <div>
     <i-select placeholder="select plaease !">
       <transition name="slide-fade">
-        <i-select-item :data="selectData" v-show='isShow' ></i-select-item>
+        <i-select-item :data="selectData" v-show="isShow"></i-select-item>
       </transition>
     </i-select>
+    <div>
+      [参考](https://juejin.im/post/5b03e610f265da0b873ad64e)
+    </div>
   </div>
 </template>
 

@@ -14,11 +14,10 @@ export default {
   name: 't1',
   mixins: [Emitter],
   mounted() {
+    this.dispatch('test', 'emit-data-test', 't1-to-test')
+
     // let t = findBrothersComponents(this, 't1', false)
     // this.$emit('accept', 'hello world')
-    this.$on('test-handler', data => {
-      console.log(data)
-    })
     // let test = findBrotherComponents(this, 'test')
     // console.log(test)
     // findBrotherComponents(this, 'test', 'hello test')
@@ -29,6 +28,11 @@ export default {
     // let c = findComponentUpward(this, 'test')
 
     // console.log(c)
+  },
+  created() {
+    this.$on('emit-data-t1', data => {
+      console.log(data)
+    })
   }
 }
 </script>

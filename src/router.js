@@ -51,6 +51,14 @@ export default new Router({
     {
       path: '/select',
       component: () => import('./views/select.vue')
+    },
+    {
+      path: '/menu',
+      component: () => import('./views/menu.vue')
+    },
+    {
+      path: '/button',
+      component: () => import('./views/button.vue')
     }
   ]
 })
