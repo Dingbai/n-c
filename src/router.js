@@ -28,6 +28,12 @@ export default new Router({
     {
       path: '/test',
       name: 'test',
+      children: [
+        {
+          path: '/t',
+          component: () => import('./views/t/t.vue')
+        }
+      ],
       component: () => import('./views/test.vue')
     },
     {

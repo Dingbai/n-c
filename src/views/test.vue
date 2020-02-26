@@ -6,14 +6,14 @@
         {{ book.name }}
       </template>
     </book-list>
-    <book-list :books="books">
+    <!-- <book-list :books="books">
       <template v-for="slotProps in books" slot-scope="{book}">
         {{ book.sale }}
         {{ book.name }}
       </template>
     </book-list>
 
-    <input type="text" v-model="name" />
+    <input type="text" v-model="name" /> -->
   </div>
 </template>
 <script>
