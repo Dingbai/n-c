@@ -57,6 +57,10 @@ export default new Router({
       component: () => import('./views/menu.vue')
     },
     {
+      path: '/n-form',
+      component: () => import('./views/n-form.vue')
+    },
+    {
       path: '/button',
       component: () => import('./views/button.vue')
     }

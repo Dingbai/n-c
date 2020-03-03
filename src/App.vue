@@ -12,6 +12,7 @@
       <router-link to="/menu">menu</router-link>
       <router-link to="/button">button</router-link>
       <router-link to="/test">test</router-link>
+      <router-link to="/n-form">n-form</router-link>
     </div>
     <div class="content">
       <router-view></router-view>
